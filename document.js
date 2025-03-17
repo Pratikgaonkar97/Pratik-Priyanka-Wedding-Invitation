@@ -1,21 +1,71 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function updateCountdown() {
-        const weddingDate = new Date("April 21, 2025 19:00:00").getTime();
-        const now = new Date().getTime();
-        const difference = weddingDate - now;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f7f7f7;
+}
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+/* Hero Section */
+.hero {
+    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+}
 
-        document.getElementById("countdown").innerHTML = 
-            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
 
-        if (difference < 0) {
-            document.getElementById("countdown").innerHTML = "We're Married!";
-        }
-    }
+/* Timeline */
+.timeline {
+    background: #fffaf0;
+    padding: 40px 0;
+    text-align: center;
+}
 
-    setInterval(updateCountdown, 1000);
-});
+.timeline-item {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    border-left: 4px solid #ff4081;
+    max-width: 600px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* RSVP */
+.rsvp input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.rsvp button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
