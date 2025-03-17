@@ -3,7 +3,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
+    background: url('DSC_3649.JPG') no-repeat center center/cover;
     background-size: 400% 400%;
     animation: fadeBackground 10s infinite ease-in-out;
 }
