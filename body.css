@@ -4,7 +4,7 @@ body {
     padding: 0;
     text-align: center;
     background: #660000;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -50,6 +50,12 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Ensure scrolling is enabled */
+html, body {
+    height: 100%;
+    overflow-y: auto;
 }
 
 /* Timeline */
