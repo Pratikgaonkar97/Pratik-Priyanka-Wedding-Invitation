@@ -3,8 +3,8 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: url('DSC_3649.JPG') no-repeat center center/cover;
-    background-size: 400% 400%;
+    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
+    background-size: cover;
     animation: fadeBackground 10s infinite ease-in-out;
 }
 
@@ -16,62 +16,62 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('images/wedding-bg.jpg') center/cover no-repeat;
     background: url('images/wedding-bg.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .hero h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 90%;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Timeline */
 .timeline {
     background: #ffe6e6;
-    padding: 40px 0;
+    padding: 30px 10px;
     text-align: center;
 }
 
 .details, .gallery {
     background-color: white;
-    margin: 20px 0;
-    padding: 30px;
+    margin: 15px 5px;
+    padding: 20px;
     border-radius: 10px;
 }
 
 .timeline-item {
     background: white;
-    margin: 20px auto;
-    padding: 15px;
+    margin: 15px auto;
+    padding: 10px;
     border-left: 4px solid #ff4d4d;
-    max-width: 600px;
+    max-width: 90%;
 }
 
 /* Gallery */
 .gallery-grid {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .gallery-grid img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
 }
 
 .btn {
     background-color: #ff4d4d;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
@@ -83,9 +83,35 @@ body {
 
 /* Footer */
 footer {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px;
     background-color: #990000;
     color: white;
     padding: 10px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .timeline-item {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .gallery-grid img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }
