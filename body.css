@@ -1,71 +1,97 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: #f7f7f7;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 0;
-}
-
-.hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 50px;
-}
-
-/* Timeline */
-.timeline {
-    background: #fffaf0;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.timeline-item {
-    background: white;
-    margin: 20px auto;
-    padding: 15px;
-    border-left: 4px solid #ff4081;
-    max-width: 600px;
-}
-
-/* Gallery */
-.gallery-grid {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.gallery-grid img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-}
-
-/* RSVP */
-.rsvp input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.rsvp button {
-    background: #28a745;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    background: #222;
-    color: white;
-    padding: 10px;
-}
+     font-family: 'Poppins', sans-serif;
+     text-align: center;
+     margin: 0;
+     padding: 0;
+     background-color: #f8f8f8;
+     text-align: center;
+     background: #f7f7f7;
+ }
+ 
+ /* Hero Section */
+ .hero {
+     background: url('images/wedding-bg.jpg') center/cover no-repeat;
+     background: url('images/wedding-bg.jpg') no-repeat center center/cover;
+     color: white;
+     padding: 50px 0;
+     padding: 100px 0;
+ }
+ 
+ .hero h1 {
+     font-family: 'Great Vibes', cursive;
+     font-size: 50px;
+ }
+ 
+ .container {
+     max-width: 800px;
+     margin: auto;
+     padding: 20px;
+ /* Timeline */
+ .timeline {
+     background: #fffaf0;
+     padding: 40px 0;
+     text-align: center;
+ }
+ 
+ .details, .gallery, .rsvp {
+     background-color: white;
+     margin: 20px 0;
+     padding: 30px;
+     border-radius: 10px;
+ .timeline-item {
+     background: white;
+     margin: 20px auto;
+     padding: 15px;
+     border-left: 4px solid #ff4081;
+     max-width: 600px;
+ }
+ 
+ /* Gallery */
+ .gallery-grid {
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+ }
+ 
+ .gallery-grid img {
+     width: 150px;
+     border-radius: 8px;
+     width: 200px;
+     height: 200px;
+     border-radius: 10px;
+ }
+ 
+ .btn {
+     background-color: #ff4081;
+     color: white;
+     padding: 10px 20px;
+     text-decoration: none;
+     border-radius: 5px;
+     display: inline-block;
+ /* RSVP */
+ .rsvp input {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ .btn:hover {
+     background-color: #e6005c;
+ .rsvp button {
+     background: #28a745;
+     color: white;
+     padding: 10px 15px;
+     border: none;
+     cursor: pointer;
+ }
+ 
+ /* Footer */
+ footer {
+     margin-top: 20px;
+     padding: 10px;
+     background-color: #222;
+     background: #222;
+     color: white;
+     padding: 10px;
+ }
