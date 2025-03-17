@@ -1,12 +1,11 @@
 /* body.css */
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
-    background-size: cover;
-    animation: fadeBackground 10s infinite ease-in-out;
+    /* Hero Section */
+.hero {
+    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0;
+}
 }
 
 .container {
