@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #ffe6ea;
+    background: #ffebeb;
 }
 
 /* Hero Section */
@@ -14,7 +14,7 @@ body {
 }
 
 .hero {
-    background: linear-gradient(-45deg, #ffebef, #ffd6e0, #ffc1cc, #ffe0e6);
+    background: linear-gradient(-45deg, #ff4d4d, #ff6666, #ff3333, #ff1a1a);
     background-size: 400% 400%;
     animation: moveBackground 10s ease infinite;
     color: white;
@@ -38,7 +38,7 @@ body {
 
 /* Timeline */
 .timeline {
-    background: #fffaf0;
+    background: #ffe6e6;
     padding: 40px 0;
     text-align: center;
 }
@@ -47,7 +47,7 @@ body {
     background: white;
     margin: 20px auto;
     padding: 15px;
-    border-left: 4px solid #ff4081;
+    border-left: 4px solid #cc0000;
     max-width: 600px;
 }
 
@@ -64,26 +64,4 @@ body {
     border-radius: 10px;
 }
 
-/* RSVP */
-.rsvp input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.rsvp button {
-    background: #28a745;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    background: #222;
-    color: white;
-    padding: 10px;
-}
+/
