@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const weddingDate = new Date('April 21, 2025 17:00:00').getTime();
 
@@ -10,13 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('timer').innerHTML =
-            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
 
         if (distance < 0) {
-            document.getElementById('timer').innerHTML = "The Wedding is Happening!";
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').innerText = "The Wedding Has Started!";
         }
     }
 
-    setInterval(updateCountdown, 1000);
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
 });
