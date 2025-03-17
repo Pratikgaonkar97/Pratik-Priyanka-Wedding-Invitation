@@ -1,26 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #ffcccc;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+#countdown, #events {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#countdown h2, #events h2 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-#countdown {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#events .event {
-    background-color: #fff;
+.event {
+    background-color: #fffbf2;
     padding: 15px;
     margin: 10px auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1.2em;
+    margin: 5px 0;
 }
