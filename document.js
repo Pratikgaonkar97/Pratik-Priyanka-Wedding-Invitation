@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const weddingDate = new Date('June 25, 2025 17:00:00').getTime();
+    const weddingDate = new Date('April 21, 2025 12:37:00').getTime();
 
     const updateCountdown = () => {
         const now = new Date().getTime();
