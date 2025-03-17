@@ -1,65 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function updateCountdown() {
-        const weddingDate = new Date("April 21, 2025 12::00").getTime();
+document.addEventListener('DOMContentLoaded', () => {
+    const weddingDate = new Date('June 25, 2025 17:00:00').getTime();
+
+    const updateCountdown = () => {
         const now = new Date().getTime();
-        const difference = weddingDate - now;
+        const distance = weddingDate - now;
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("countdown").innerHTML = 
-            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-        if (difference < 0) {
-            document.getElementById("countdown").innerHTML = "We're Married!";
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('timer').innerHTML = "The wedding has begun!";
         }
-    }
+    };
 
-    setInterval(updateCountdown, 1000);
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
 });
-
-function rsvpCountdown() {
-    const rsvpDeadline = new Date("April 10, 2025 23:59:59").getTime();
-    const now = new Date().getTime();
-    const difference = rsvpDeadline - now;
-
-    if (difference < 0) {
-        document.getElementById("rsvp-countdown").innerHTML = "RSVP Closed!";
-        return;
-    }
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    document.getElementById("rsvp-countdown").innerHTML = 
-        `Hurry! RSVP closes in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-setInterval(rsvpCountdown, 1000);
-
-
-function rsvpCountdown() {
-    const rsvpDeadline = new Date("April 10, 2025 23:59:59").getTime();
-    const now = new Date().getTime();
-    const difference = rsvpDeadline - now;
-
-    if (difference < 0) {
-        document.getElementById("rsvp-countdown").innerHTML = "RSVP Closed!";
-        return;
-    }
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    document.getElementById("rsvp-countdown").innerHTML = 
-        `Hurry! RSVP closes in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-setInterval(rsvpCountdown, 1000);
-
