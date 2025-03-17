@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function updateCountdown() {
-        const weddingDate = new Date("April 21, 2025 19:00:00").getTime();
+        const weddingDate = new Date("April 21, 2025 12::00").getTime();
         const now = new Date().getTime();
         const difference = weddingDate - now;
 
