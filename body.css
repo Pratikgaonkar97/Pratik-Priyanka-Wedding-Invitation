@@ -2,6 +2,86 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    background: linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 105, 180, 0.5)), url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #b80f0a;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #800000;
+}
+
+#countdown {
+    font-size: 1.5em;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #b80f0a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event {
+    background: rgba(255, 224, 224, 0.9);
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b80f0a;
+}
+
+.event h3 {
+    color: #b80f0a;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.event p {
+    font-size: 1.2em;
+    color: #800000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2, .event p {
+        font-size: 1.1em;
+    }
+}
+/* body.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
