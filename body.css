@@ -3,14 +3,21 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #ffcccc;
-    text-align: center;
+    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
+    background-size: 400% 400%;
+    animation: fadeBackground 10s infinite ease-in-out;
+}
+
+@keyframes fadeBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Hero Section */
 .hero {
-    background: url('DSC_3649.JPG') center/cover no-repeat;
-    background: url('DSC_3649.JPG') no-repeat center center/cover;
+    background: url('images/wedding-bg.jpg') center/cover no-repeat;
+    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 0;
 }
