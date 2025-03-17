@@ -1,47 +1,74 @@
+/* body.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: url('image\DSC_3649.JPG') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: rgba(255, 204, 204, 0.8);
-    padding: 40px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-#countdown, #events {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 50px auto;
     width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #b80f0a;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 1.5em;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #b80f0a;
 }
 
 .event {
-    background-color: rgba(255, 255, 242, 0.8);
+    background: rgba(255, 224, 224, 0.9);
     padding: 15px;
     margin: 10px auto;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
+.event h3 {
+    color: #b80f0a;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
 
-    #countdown, #events {
+.event p {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .container {
         width: 90%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    h2, .event p {
+        font-size: 1.1em;
     }
 }
