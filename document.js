@@ -1,43 +1,70 @@
-// Countdown Timer
-const countdownElement = document.getElementById('countdown');
-const weddingDate = new Date('April 21, 2025 19:00:00').getTime();
-let countdownInterval;
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = weddingDate - now;
-
-    if (timeLeft <= 0) {
-        countdownElement.innerHTML = "🎉 We're Married!";
-        clearInterval(countdownInterval); // Stop the countdown
-        return;
-    }
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f7f7f7;
 }
 
-countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown(); // Initial call
+.hero {
+    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+}
 
-// RSVP Form Confirmation with Local Storage
-document.getElementById("rsvp-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    
-    if (name && email) {
-        localStorage.setItem("rsvpConfirmed", "true");
-        document.getElementById("rsvp-message").innerText = `🎉 Thank you, ${name}! Your RSVP is confirmed.`;
-        document.getElementById("rsvp-form").reset();
-    }
-});
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
 
-// Check if RSVP is already confirmed
-if (localStorage.getItem("rsvpConfirmed")) {
-    document.getElementById("rsvp-message").innerText = "✅ You have already RSVP'd. See you at the wedding!";
+.hero h2 {
+    font-size: 30px;
+}
+
+.btn {
+    background: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.rsvp input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.rsvp button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    background: #222;
+    color: white;
+    padding: 10px;
 }
