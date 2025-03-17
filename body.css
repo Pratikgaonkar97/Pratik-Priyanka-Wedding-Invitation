@@ -1,117 +1,26 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    background: url('https://tenor.com/view/cora%C3%A7%C3%B5es-hearts-love-falling-hearts-falling-in-love-gif-16150623') no-repeat center center/cover;
-    background-size: cover;
-    animation: fadeBackground 10s infinite ease-in-out;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-@keyframes fadeBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 80px 0;
-}
-
-.hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-}
-
-.container {
-    max-width: 90%;
-    margin: auto;
-    padding: 15px;
-}
-
-/* Timeline */
-.timeline {
-    background: #ffe6e6;
-    padding: 30px 10px;
-    text-align: center;
-}
-
-.details, .gallery {
-    background-color: white;
-    margin: 15px 5px;
+header {
+    background-color: #ffcccc;
     padding: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.timeline-item {
-    background: white;
-    margin: 15px auto;
-    padding: 10px;
-    border-left: 4px solid #ff4d4d;
-    max-width: 90%;
+#countdown {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-/* Gallery */
-.gallery-grid {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery-grid img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-}
-
-.btn {
-    background-color: #ff4d4d;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
+#events .event {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px auto;
     border-radius: 5px;
-    display: inline-block;
-}
-
-.btn:hover {
-    background-color: #e6005c;
-}
-
-/* Footer */
-footer {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #990000;
-    color: white;
-    padding: 10px;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .timeline-item {
-        max-width: 95%;
-        padding: 10px;
-    }
-
-    .gallery-grid img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
