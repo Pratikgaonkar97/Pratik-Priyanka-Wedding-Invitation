@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Pratik & Priyanka</h1>
+            <h2>We're Getting Married!</h2>
+            <p class="date">April 21, 2025</p>
+            <p id="countdown" class="countdown"></p>
+            <a href="#rsvp" class="btn">RSVP Now</a>
+        </div>
+    </section>
+    
+    <section class="details">
+        <div class="container">
+            <h2>Wedding Details</h2>
+            <p><strong>Date:</strong> April 21, 2025</p>
+            <p><strong>Venue:</strong> The Grand Wedding Hall, Mumbai</p>
+            <p><strong>Time:</strong> 7:00 PM onwards</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.403705927734!2d73.84797381510291!3d18.52461638740666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c068f3f4c4c5%3A0x8f92b79b3c60e1b6!2sThe%20Grand%20Wedding%20Hall!5e0!3m2!1sen!2sin!4v1643208349876!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+    <section class="gallery">
+        <div class="container">
+            <h2>Our Beautiful Moments</h2>
+            <div class="gallery-grid">
+                <img src="_DSC9479.jpg" alt="Pre-wedding shoot">
+                <img src="image2.jpg" alt="Engagement">
+                <img src="image3.jpg" alt="Happy moments">
+            </div>
+        </div>
+    </section>
+    
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <h2>RSVP</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>With Love, Pratik & Priyanka ❤️</p>
+    </footer>
+</body>
+</html>
