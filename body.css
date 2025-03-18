@@ -1,40 +1,55 @@
-/* Dropdown Styling */
-.dropdown {
-    width: 100%;
+/* Background Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
+    background-size: cover;
+}
+
+/* Container Styling */
+.container {
     max-width: 800px;
-    margin: 10px auto;
-}
-
-.dropdown-btn {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.dropdown-btn:hover {
-    background-color: #e6005c;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 /* Soft Opening Animation */
-.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    background-color: white;
-    padding: 0;
-    border-radius: 5px;
-    margin-top: 5px;
-    transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Show content */
-.show {
-    max-height: 500px !important;
-    padding: 10px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Event Sections */
+.event {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+/* Default Expanded Section */
+.expand {
+    max-height: 500px;
+}
+
+/* Google Maps */
+iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    border: 0;
 }
