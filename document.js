@@ -22,32 +22,3 @@ function updateCountdown() {
 
 // Update Countdown Every Second
 setInterval(updateCountdown, 1000);
-
-// Smooth Scrolling for Links
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("a[href^='#']").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-});
-
-// Fade-in Animation on Scroll
-function revealOnScroll() {
-    let reveals = document.querySelectorAll(".event");
-    reveals.forEach(event => {
-        let windowHeight = window.innerHeight;
-        let elementTop = event.getBoundingClientRect().top;
-        let elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-            event.classList.add("fade-in");
-        }
-    });
-}
-
-// Attach Scroll Event
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
