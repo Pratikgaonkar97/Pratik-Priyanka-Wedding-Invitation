@@ -1,4 +1,16 @@
 // Countdown Timer for Wedding Day
+const audio = document.getElementById("bg-music");
+const button = document.getElementById("toggle-music");
+
+button.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        button.textContent = "Pause Music";
+    } else {
+        audio.pause();
+        button.textContent = "Play Music";
+    }
+});
 function updateCountdown() {
     const weddingDate = new Date("April 21, 2025 17:00:00").getTime();
     const now = new Date().getTime();
