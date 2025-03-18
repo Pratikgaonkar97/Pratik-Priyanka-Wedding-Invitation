@@ -55,3 +55,37 @@ iframe {
     font-weight: bold;
     margin: 20px 0;
 }
+
+/* Floating Hearts Animation */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    opacity: 0.7;
+    clip-path: path("M12.7 2.3C11.6 1 10 0 8.5 0S5.4 1 4.3 2.3C3.2 3.7 2.5 5.3 2.5 7c0 2.3 1.2 4.5 3.1 6.7 1.5 1.7 3.5 3.2 5.1 4.5 1.6-1.3 3.6-2.8 5.1-4.5 1.9-2.2 3.1-4.4 3.1-6.7 0-1.7-0.7-3.3-1.8-4.7C15.6 1 14 0 12.5 0S9.4 1 8.3 2.3z");
+    animation: floatHearts 4s linear infinite;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
