@@ -1,162 +1,43 @@
-/* body.css */
-body {
-    @keyframes moveBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-    
-    /* Hero Section */
-.hero {
-    background: url('images/wedding-bg.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 80px 0;
-}
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    color: #b80f0a;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #800000;
-}
-
-#countdown {
-    font-size: 1.5em;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #b80f0a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.event {
-    background: rgba(255, 224, 224, 0.9);
-    padding: 15px;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #b80f0a;
-}
-
-.event h3 {
-    color: #b80f0a;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.event p {
-    font-size: 1.2em;
-    color: #800000;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 2.5em;
-    }
-    
-    h2, .event p {
-        font-size: 1.1em;
-    }
-}
-/* body.css */
+/* Background Image */
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
     margin: 0;
     padding: 0;
+    background: url('images/DSC_3649.JPG') no-repeat center center/cover;
+    background-size: cover;
 }
 
+/* Overlay for Better Readability */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Container */
 .container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    color: white;
 }
 
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3em;
-    color: #b80f0a;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-#countdown {
-    font-size: 1.5em;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #b80f0a;
-}
-
+/* Event Box */
 .event {
-    background: rgba(255, 224, 224, 0.9);
-    padding: 15px;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: black;
 }
 
-.event h3 {
-    color: #b80f0a;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-}
-
-.event p {
-    font-size: 1.2em;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 2.5em;
-    }
-    
-    h2, .event p {
-        font-size: 1.1em;
-    }
-   .map-container {
+/* Map Container */
+.map-container {
     margin: 20px auto;
     text-align: center;
     max-width: 800px;
@@ -168,6 +49,9 @@ iframe {
     border-radius: 10px;
 }
 
-}
-
+/* Countdown Timer */
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
 }
