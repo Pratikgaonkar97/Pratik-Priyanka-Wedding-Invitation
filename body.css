@@ -1,19 +1,13 @@
-/* Fullscreen Video Background */
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.video-container video,
-.video-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 /* Dark Overlay for Readability */
