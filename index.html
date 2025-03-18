@@ -9,15 +9,12 @@
 </head>
 <body onload="updateCountdown()">
 
-    <!-- Background Video -->
-    <div class="video-container">
-        <video autoplay loop muted playsinline>
-            <source src="wedding-bg.mp4" type="video/mp4">
-            <!-- Fallback Image -->
-            <img src="DSC_3649.JPG" alt="Wedding Background">
-        </video>
-        <div class="overlay"></div>
-    </div>
+     <audio id="bg-music" autoplay loop>
+        <source src="/mnt/data/Mangalashtaka%20Basta%20Shankar%20Mahadevan%20Sayali%20Sanjeev,%20Akshay%20Tanksale%20&%20Parth%20Bhalerao.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="toggle-music">Pause Music</button>
+    <script src="script.js"></script>
 
     <!-- Background Music -->
     <audio autoplay loop>
