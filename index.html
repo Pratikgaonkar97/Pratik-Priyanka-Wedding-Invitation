@@ -8,19 +8,21 @@
 </head>
 <body>
 
-    <!-- Main Wedding Invitation in an Iframe -->
-    <iframe id="mainPage" src="index.html"></iframe>
-
-    <!-- Welcome Overlay -->
+    <!-- Welcome Message Overlay -->
     <div class="welcome-container" id="welcomeScreen">
         <h1 class="fade-in">💐 Shubha Vivaha 💐</h1>
         <h2 class="fade-in">Invited by Pratik & Priyanka</h2>
     </div>
 
+    <!-- Main Wedding Invitation -->
+    <div id="mainContent">
+        <iframe src="index.html"></iframe>
+    </div>
+
     <script>
-        // Hide the welcome screen after 5 seconds
+        // Fade out the welcome screen after 5 seconds
         setTimeout(function() {
-            document.getElementById("welcomeScreen").style.display = "none";
+            document.getElementById("welcomeScreen").classList.add("hide");
         }, 5000);
     </script>
 
