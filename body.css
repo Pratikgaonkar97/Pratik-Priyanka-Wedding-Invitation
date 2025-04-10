@@ -1,90 +1,252 @@
-/* Apply Background Image */
 body {
+    background: url('_DSC8749.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: url('DSC_3649.JPG') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
+    color: #333;
     margin: 0;
     padding: 0;
+    position: relative;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23ff4081" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'), auto;
 }
 
-/* Container Styling */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.3), rgba(147, 112, 219, 0.3));
+    z-index: 0;
+}
+
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Header Fonts */
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.5em;
-    color: #FFD700;
-    animation: fadeIn 2s;
-}
-
-h2 {
-    font-size: 1.8em;
+/* Language Switcher */
+.lang-switcher {
     margin-bottom: 20px;
-    color: #FFA500;
 }
 
-/* Countdown Timer */
-#countdown {
-    font-size: 1.8em;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
+.lang-switcher button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff4081, #ff9800);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lang-switcher button:hover {
+    background: linear-gradient(45deg, #ff9800, #ff4081);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lang-switcher button.active {
+    background: linear-gradient(45deg, #8e24aa, #ff4081);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Title Background */
+.title-bg {
+    position: relative;
+    background: url('https://t4.ftcdn.net/jpg/08/60/86/51/240_F_860865161_nmYeVfFOWeYhVGvYnJtJMcrLq0xMnL0e.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.invitation-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #FFD700;
-}
-
-/* Event Styling */
-.event {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 15px;
-    margin: 10px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-.event h3 {
-    color: #FFD700;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.event p {
-    font-size: 1.2em;
-}
-
-/* Map Links */
-.map-link {
     display: inline-block;
+    max-width: 80%;
+}
+
+.invitation-message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h1.name-color {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #ffd700, #ff69b4, #00ffff, #ffd700); /* Gold, Hot Pink, Cyan, Gold */
+    background-size: 300% 300%; /* Larger size for smoother animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* Enhanced white glow, no black shadow */
+    margin: 10px 0 0 0;
+    animation: gradientShift 6s ease infinite; /* Slower animation */
+}
+
+/* Countdown Style */
+.countdown-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://www.transparenttextures.com/patterns/paper-1.png') no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.countdown-box {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-box span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #355e3b;
+}
+
+.colon {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #355e3b;
+    margin: 0 5px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: #6b705c;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff4081;
+    border-radius: 50%;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #ff4081;
+    left: -20px;
+    top: 0;
+}
+
+.timeline-item iframe {
+    width: 100%;
+    height: 100px;
+    border: 0;
+    border-radius: 10px;
     margin-top: 10px;
-    padding: 10px 15px;
-    background: #FFD700;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
 }
 
-.map-link:hover {
-    background: #FFA500;
+/* Event-specific Background Images */
+.engagement-bg {
+    background: url('https://t4.ftcdn.net/jpg/02/08/99/43/240_F_208994387_yxpDPiRsonvL3kzBOAZQydvhrPh1BDo0.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Soft Opening Animation */
+.haldi-bg {
+    background: url('https://t4.ftcdn.net/jpg/02/56/34/39/240_F_256343957_CCygJ0Lx5Lgu1w0ELg67uTarTRdU7qn9.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.wedding-bg {
+    background: url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.reception-bg {
+    background: url('https://t3.ftcdn.net/jpg/05/70/04/02/240_F_570040265_4xitPhVoc637RBqvEDHCX0BJ1mSpqtgo.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
 }
