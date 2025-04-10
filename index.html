@@ -1,132 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Countdown Logic with Confetti
-    function updateCountdown() {
-        const weddingDate = new Date("April 21, 2025 12:37:00").getTime();
-        const now = new Date().getTime();
-        const timeLeft = weddingDate - now;
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratik & Priyanka's Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="body.css" />
+  <script src="document.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button data-lang="mr">मराठी</button>
+      <button data-lang="en">English</button>
+    </div>
 
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    <!-- Title with Background Image -->
+    <div class="title-bg">
+      <div class="invitation-text">
+        <p class="invitation-message">विवाह! एक बंधन, एक कर्तव्य, एक नवं नातं, एक जाणीव. नव्याने जुळणारी एक रेशीम गाठ! एक स्वप्न… दोन डोळ्यांचं, एक हुरहूर… दोन मनांची, एक चाहूल… सात जन्मांची, अशा मंगल क्षणाचे साक्षीदार होण्यासाठी आपणांस विवाहाचे अगत्याचे आमंत्रण</p>
+        <h1 class="name-color">प्रतिक आणि प्रियंका</h1>
+      </div>
+    </div>
 
-        const formattedHours = hours.toString().padStart(2, '0');
-        const formattedMinutes = minutes.toString().padStart(2, '0');
-        const formattedSeconds = seconds.toString().padStart(2, '0');
+    <!-- Countdown Timer -->
+    <div id="countdown" class="countdown-style">
+      <div class="countdown-unit">
+        <div class="countdown-box"><span id="days">12</span></div>
+        <div class="countdown-label"><span>Days</span></div>
+      </div>
+      <span class="colon">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-box"><span id="hours">13</span></div>
+        <div class="countdown-label"><span>Hours</span></div>
+      </div>
+      <span class="colon">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-box"><span id="minutes">22</span></div>
+        <div class="countdown-label"><span>Minutes</span></div>
+      </div>
+      <span class="colon">:</span>
+      <div class="countdown-unit">
+        <div class="countdown-box"><span id="seconds">41</span></div>
+        <div class="countdown-label"><span>Seconds</span></div>
+      </div>
+    </div>
 
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = formattedHours;
-        document.getElementById("minutes").innerText = formattedMinutes;
-        document.getElementById("seconds").innerText = formattedSeconds;
-
-        if (timeLeft <= 0) {
-            const lang = document.querySelector(".lang-switcher button.active")?.getAttribute("data-lang") || "mr";
-            document.getElementById("countdown").innerHTML = lang === "mr" ? "आज आमचा लग्नाचा दिवस आहे!" : "Today is our wedding day!";
-            launchConfetti();
-        }
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Confetti Function
-    function launchConfetti() {
-        const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
-        document.body.appendChild(script);
-        script.onload = function () {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ['#ff4081', '#ff9800', '#8e24aa']
-            });
-        };
-    }
-
-    // Language Switcher
-    const langButtons = document.querySelectorAll(".lang-switcher button");
-    const translations = {
-        mr: {
-            invitation: "विवाह! एक बंधन, एक कर्तव्य, एक नवं नातं, एक जाणीव. नव्याने जुळणारी एक रेशीम गाठ! एक स्वप्न… दोन डोळ्यांचं, एक हुरहूर… दोन मनांची, एक चाहूल… सात जन्मांची, अशा मंगल क्षणाचे साक्षीदार होण्यासाठी आपणांस विवाहाचे अगत्याचे आमंत्रण",
-            title: "प्रतिक आणि प्रियंका",
-            days: "दिवस",
-            hours: "तास",
-            minutes: "मिनिटे",
-            seconds: "सेकंद",
-            timeline: [
-                { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
-                { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "आर के फार्म ऍण्ड रिसॉर्ट, होडी रोडजवळ, बदलापूर गाव, बदलापूर, महाराष्ट्र ४२१५०३", address: "" },
-                { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट A/C हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
-                { title: "स्वागत समारंभ आणि स्नेह भोजन", date: "२१ एप्रिल २०२५", time: "१:०० - ३:०० PM", location: "मोरया बँक्वेट A/C हॉल", address: "" }
-            ],
-            labels: { date: "तारीख", time: "वेळ", location: "स्थळ", address: "पत्ता" }
-        },
-        en: {
-            invitation: "Marriage! A bond, a duty, a new relationship, a realization. A newly tied knot! A dream… seen by two eyes, a longing… felt by two hearts, a calling… for a lifetime. You are cordially invited to be a part of this auspicious moment and bless the couple.",
-            title: "Pratik & Priyanka",
-            days: "Days",
-            hours: "Hours",
-            minutes: "Minutes",
-            seconds: "Seconds",
-            timeline: [
-                { title: "Engagement Ceremony", date: "18 April 2025", time: "12:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
-                { title: "Haldi Ceremony", date: "20 April 2025", time: "5:00 PM", location: "RK Farm & Resort, near Hodi Road, Badlapur Gaon, Badlapur, Maharashtra 421503", address: "" },
-                { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet A/C Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
-                { title: "Welcome Ceremony and Lunch", date: "21 April 2025", time: "1:00 - 3:00 PM", location: "Morya Banquet A/C Hall", address: "" }
-            ],
-            labels: { date: "Date", time: "Time", location: "Venue", address: "Address" }
-        }
-    };
-
-    langButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const lang = btn.getAttribute("data-lang");
-            langButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            // Update Invitation Message
-            document.querySelector(".invitation-message").textContent = translations[lang].invitation;
-
-            // Update Title
-            document.querySelector(".name-color").textContent = translations[lang].title;
-
-            // Update Countdown Labels
-            document.querySelectorAll(".countdown-label span").forEach((span, i) => {
-                span.textContent = Object.values(translations[lang])[i + 2];
-            });
-
-            // Update Timeline
-            document.querySelectorAll(".timeline-item").forEach((item, i) => {
-                const event = translations[lang].timeline[i];
-                const address = event.address ? `<p><strong>${translations[lang].labels.address}:</strong> ${event.address}</p>` : "";
-                item.innerHTML = `
-                    <h3>${event.title}</h3>
-                    <p><strong>${translations[lang].labels.date}:</strong> ${event.date}</p>
-                    <p><strong>${translations[lang].labels.time}:</strong> ${event.time}</p>
-                    <p><strong>${translations[lang].labels.location}:</strong> ${event.location}</p>
-                    ${address}
-                    ${item.dataset.map ? `<iframe src="${item.dataset.map}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` : ""}
-                `;
-            });
-        });
-    });
-
-    // Initialize with Marathi (default)
-    document.querySelector(".invitation-message").textContent = translations.mr.invitation;
-    document.querySelector(".name-color").textContent = translations.mr.title;
-    document.querySelectorAll(".timeline-item").forEach((item, i) => {
-        const event = translations.mr.timeline[i];
-        const address = event.address ? `<p><strong>${translations.mr.labels.address}:</strong> ${event.address}</p>` : "";
-        item.innerHTML = `
-            <h3>${event.title}</h3>
-            <p><strong>${translations.mr.labels.date}:</strong> ${event.date}</p>
-            <p><strong>${translations.mr.labels.time}:</strong> ${event.time}</p>
-            <p><strong>${translations.mr.labels.location}:</strong> ${event.location}</p>
-            ${address}
-            ${item.dataset.map ? `<iframe src="${item.dataset.map}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` : ""}
-        `;
-    });
-
-    // Set default active language (Marathi)
-    document.querySelector("[data-lang='mr']").classList.add("active");
-});
+    <!-- Event Timeline -->
+    <div class="timeline">
+      <div class="timeline-item engagement-bg" data-title="साखरपुडा समारंभ" data-date="१८ एप्रिल २०२५" data-time="१२:०० PM" data-location="मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.046166712851!2d73.01048790387395!3d18.846481138894863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dfab7c767bcf%3A0x28206374a18ce56c!2sjare%20mata%20mander!5e1!3m2!1sen!2sin!4v1743685194677!5m2!1sen!2sin"></div>
+      <div class="timeline-item haldi-bg" data-title="हळदी समारंभ" data-date="२० एप्रिल २०२५" data-time="५:०० PM" data-location="आर के फार्म ऍण्ड रिसॉर्ट, होडी रोडजवळ, बदलापूर गाव, बदलापूर, महाराष्ट्र ४२१५०३" data-map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2870.8663987747254!2d73.258077!3d19.1544406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7edc22d5b8301%3A0xe963f207797b52af!2sRK%20Farm%20%26%20RESORT!5e1!3m2!1sen!2sin!4v1744267843669!5m2!1sen!2sin"></div>
+      <div class="timeline-item wedding-bg" data-title="लग्न समारंभ" data-date="२१ एप्रिल २०२५" data-time="१२:३७ PM" data-location="मोरया बँक्वेट A/C हॉल" data-address="खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1208.0944619067677!2d72.99933705718968!3d18.872646270883187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dc0409fbcf95%3A0x6c59681d2fa9bf4b!2sShivdurga%20Wearhouse%20And%20Transportation!5e1!3m2!1sen!2sin!4v1742303982459!5m2!1sen!2sin"></div>
+      <div class="timeline-item reception-bg" data-title="स्वागत समारंभ आणि स्नेह भोजन" data-date="२१ एप्रिल २०२५" data-time="१:०० - ३:०० PM" data-location="मोरया बँक्वेट A/C हॉल"></div>
+    </div>
+  </div>
+</body>
+</html>
