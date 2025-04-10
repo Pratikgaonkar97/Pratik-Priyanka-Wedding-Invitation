@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
             timeline: [
                 { title: "Engagement Ceremony", date: "18 April 2025", time: "12:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
                 { title: "Haldi Ceremony", date: "20 April 2025", time: "5:00 PM", location: "RK Farm & Resort, near Hodi Road, Badlapur Gaon, Badlapur, Maharashtra 421503", address: "" },
-                { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet A/C Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
-                { title: "Welcome Ceremony and Lunch", date: "21 April 2025", time: "1:00 - 3:00 PM", location: "Morya Banquet A/C Hall", address: "" }
+                { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
+                { title: "Welcome Ceremony and Lunch", date: "21 April 2025", time: "1:00 - 3:00 PM", location: "Morya Banquet Hall", address: "" }
             ],
             labels: { date: "Date", time: "Time", location: "Venue", address: "Address" }
         }
